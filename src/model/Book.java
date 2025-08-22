@@ -42,6 +42,6 @@ public class Book {
 
     @Override
     public String toString() {
-        return "id:\t" + id + "\nназвания:\t" + title + "\nавтор:\t" + author;
+        return String.format("\nid книги: \t%d \nназвания: \t%s \n   автор: \t%s", id, title, author);
     }
 }

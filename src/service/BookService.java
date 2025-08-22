@@ -25,7 +25,14 @@ public class BookService {
     }
 
     public void deleteBook(int id) {
-        dao.deleteBookById(id);
+
+        if(dao.getBookById(id) == null) {
+            System.out.println("Неверный ID");
+        }
+        else {
+            dao.deleteBookById(id);
+            System.out.println("Книга успешно удалено!");
+        }
     }
 
 

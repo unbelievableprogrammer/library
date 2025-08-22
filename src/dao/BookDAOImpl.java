@@ -27,7 +27,7 @@ public class BookDAOImpl implements BookDAO{
 
     @Override
     public List<Book> getAllBooks() {
-        List<Book> books = new ArrayList<Book>();
+        List<Book> books = new ArrayList<>();
         String sql = "select * from books";
         try(Statement stmt = conn.createStatement();
         ResultSet rs = stmt.executeQuery(sql)) {
@@ -62,7 +62,7 @@ public class BookDAOImpl implements BookDAO{
             ps.setInt(1, id);
             ps.executeUpdate();
         }catch (SQLException e) {
-            e.printStackTrace();
+            System.out.println("Неверный id ввели");
         }
     }
 }

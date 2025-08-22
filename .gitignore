@@ -2,7 +2,7 @@
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
-Config.properties
+config.properties
 
 ### Eclipse ###
 .apt_generated
